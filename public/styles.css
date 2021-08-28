@@ -1,0 +1,111 @@
+body{
+  font-family: "archivo narrow", helvetica, sans-serif;
+}
+
+/* splash screen */
+.intro{
+  position:fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #161616;
+  transition: 1s;
+}
+
+.logoheader{
+  position: absolute;
+  top:40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #ffffff;
+}
+
+.logo{
+  position: relative;
+  display: inline-block;
+  bottom: -20px;
+  opacity: 0;
+
+}
+
+.logo.active {
+  bottom: 0;
+  opacity: 1;
+  transition: ease-in-out 0.5s;
+}
+
+.logo.fade {
+  bottom: 150px;
+  opacity: 0;
+  transition: ease-in-out 0.5s;
+}
+
+
+.parallax {
+
+
+  /* Set a specific height */
+  min-height: 670px; 
+
+  margin-left: -1%;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+/* .parallax_1 {
+  background-repeat: no-repeat;
+  background-size: cover;
+    background-color: transparent;
+    background-position: 0px -31.5238px;
+    background-image: url(//user-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_1500,w_2000,f_auto,q_auto/10070/IMG_5195-1_qdl5cf.jpg);
+    min-height: 657px;
+    background-attachment: fixed;
+} */
+
+
+
+.parallax .card {
+  position: absolute;
+  background: white;
+  font-size: x-large;
+  padding: 2% 4%;
+  margin: 2%;
+}
+
+.parallax .card .card_heading{
+  font-size: 50px;
+  font-variant: small-caps;
+  /* padding: 5%; */
+  padding-top: 13%;
+  /* previously it was 16% */
+}
+
+.parallax .card .card_heading .cardheading_content{
+  font-size: 24px;
+  font-variant: normal;
+  padding: 5%;
+  padding-top: 16%;
+}
+
+.leftcard {
+  border: 2px;
+  border-color: white;
+  background: white;
+
+  max-width: 430px;
+  font-size: x-large;
+  padding: 2% 4%;
+}
+
+.leftcard .leftcard_heading {
+  font-size: 45px;
+  font-variant: small-caps;
+  padding-bottom: 5%;
+  /* padding-top: -3%; */
+}
