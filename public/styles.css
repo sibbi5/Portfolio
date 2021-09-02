@@ -1,6 +1,318 @@
 body{
-  font-family: "archivo narrow", helvetica, sans-serif;
+  font-family: 'Poppins', sans-serif;
+  color: white;
 }
+nav{
+
+  padding: 0 15px;
+}
+
+.menu{
+    list-style-type: none;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
+
+
+.logo{
+  font-size: 20px;
+  padding: 5px;
+}
+
+.item{
+  padding: 5px;
+  
+}
+
+
+
+
+/* Mobile */
+@media (min-width : 320px)   and (max-width : 767px) {
+
+  .menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+  }
+  .menu li a {
+    display: block;
+    padding: 15px 5px;
+  }
+  .toggle{
+    order: 1;
+    font-size: 16px;
+  }
+  .item{
+    order: 2;
+    width: 100%;
+    text-align: center;
+    display: none;
+  }
+  
+  .active .item{
+    display: block;
+    
+  }
+
+  .item:not(.button) a:hover,
+  .item a.hover::after {
+  color: #ccc;
+  
+  }
+  
+  .parallax {
+
+
+    /* Set a specific height */
+    min-height: 100vh; 
+  
+    margin-left: -1%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
+  .parallax .card {
+    position: absolute;
+    background: black;
+    font-size: x-large;
+    padding: 9%;
+    margin-top: 58%;
+    border: solid;
+    border-color: white;
+    border-width: 1vw;
+    height: 38vh;
+    width: 44vw;
+    /* margin: 2%; */
+  }
+  
+  .parallax .card .card_heading{
+    font-size: 6vw;
+    font-variant: small-caps;
+    color: white;
+    line-height: 6vh;
+
+  }
+  
+  .parallax .card .card_heading .cardheading_content{
+    font-size: 3vw;
+    font-variant: normal;
+    line-height: 3vh;
+    padding-top: 2vh;
+    /* padding: 5%; */
+  
+  }
+
+}
+
+
+/* 
+  ##Device = Tablets, Ipads
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+  }
+  .menu li a {
+    display: block;
+    padding: 15px 5px;
+  }
+  .toggle{
+    display: none;
+  }
+  /* .item{
+    width: 100%;
+    text-align: center;
+  } */
+  
+  .active .item{
+    display: block;
+    
+  }
+  
+  .item:not(.button) a:hover,
+  .item a.hover::after {
+  color: #ccc;
+  
+  }
+  
+  .parallax {
+    /* Set a specific height */
+    min-height: 100vh; 
+  
+    margin-left: -1%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
+  .parallax .card {
+    position: absolute;
+    background: black;
+    font-size: x-large;
+    padding: 9%;
+    margin-top: 58%;
+    border: solid;
+    border-color: white;
+    border-width: 1vw;
+    height: 38vh;
+    width: 44vw;
+    /* margin: 2%; */
+  }
+  
+  .parallax .card .card_heading{
+    font-size: 6vw;
+    font-variant: small-caps;
+    color: white;
+    line-height: 6vh;
+
+  }
+  
+  .parallax .card .card_heading .cardheading_content{
+    font-size: 3vw;
+    font-variant: normal;
+    line-height: 3vh;
+    padding-top: 2vh;
+    /* padding: 5%; */
+  }  
+}
+
+
+/* 
+  ##Device = Laptops, Desktops
+*/
+
+@media (min-width: 1025px) {
+
+  .menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; 
+  }
+  .menu li a {
+    display: block;
+    padding: 15px 5px;
+  }
+
+  .toggle{
+    display: none;
+  }
+  .item{
+    position: relative;
+    display: block;
+    width: auto;
+  }
+  
+  
+  .active .item{
+    display: block;
+    
+  }
+
+  .item:not(.button) a:hover,
+  .item a.hover::after {
+  color: #ccc;
+  
+  }
+  
+  .parallax{
+
+    /* content: ""; */
+    /* Set a specific height */
+    min-height: 100vh; 
+    margin-left: -1%;
+    position: relative;
+    /* Create the parallax scrolling effect */
+    background-image: url(./assets/testimage.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;  
+    /* opacity: 0.5; */
+  }
+  .parallax::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+   background-color: #002f4b;
+    opacity: 0.5 ; 
+  }
+
+
+  .parallax1{
+
+    /* content: ""; */
+    /* Set a specific height */
+    min-height: 100vh; 
+    margin-left: -1%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+    /* opacity: 0.5; */
+  }
+  
+  .parallax .card {
+    position: absolute;
+    background: black;
+    font-size: x-large;
+    padding: 9%;
+    line-height: 10vh;
+    border: solid;
+    border-color: white;
+    border-width: 1vw;
+    height: 74vh;
+    width: 40vw;
+    /* margin: 2%; */
+  }
+  
+  .parallax .card .card_heading{
+    font-size: 4vw;
+    font-variant: small-caps;
+    color: white;
+    /* padding: 5%; */
+    /* padding-top: 13%; */
+    /* previously it was 16% */
+  }
+  
+  .parallax .card .card_heading .cardheading_content{
+    font-size: 1.5vw;
+    font-variant: normal;
+    /* padding: 5%; */
+  
+  }
+
+
+
+
+  
+}
+
+
+
+
 
 /* splash screen */
 .intro{
@@ -22,7 +334,7 @@ body{
   color: #ffffff;
 }
 
-.logo{
+.intrologo{
   position: relative;
   display: inline-block;
   bottom: -20px;
@@ -30,33 +342,20 @@ body{
 
 }
 
-.logo.active {
+.intrologo.active {
   bottom: 0;
   opacity: 1;
   transition: ease-in-out 0.5s;
 }
 
-.logo.fade {
+.intrologo.fade {
   bottom: 150px;
   opacity: 0;
   transition: ease-in-out 0.5s;
 }
 
 
-.parallax {
 
-
-  /* Set a specific height */
-  min-height: 670px; 
-
-  margin-left: -1%;
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-}
 
 /* .parallax_1 {
   background-repeat: no-repeat;
@@ -70,29 +369,7 @@ body{
 
 
 
-.parallax .card {
-  position: absolute;
-  background: white;
-  font-size: x-large;
-  padding: 2% 4%;
-  margin: 2%;
-}
-
-.parallax .card .card_heading{
-  font-size: 50px;
-  font-variant: small-caps;
-  /* padding: 5%; */
-  padding-top: 13%;
-  /* previously it was 16% */
-}
-
-.parallax .card .card_heading .cardheading_content{
-  font-size: 24px;
-  font-variant: normal;
-  padding: 5%;
-  padding-top: 16%;
-}
-
+/* 
 .leftcard {
   border: 2px;
   border-color: white;
@@ -107,5 +384,5 @@ body{
   font-size: 45px;
   font-variant: small-caps;
   padding-bottom: 5%;
-  /* padding-top: -3%; */
-}
+  /* padding-top: -3%;
+} */
