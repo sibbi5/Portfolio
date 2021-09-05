@@ -171,35 +171,59 @@ a{
     background-size: cover;
     
   }
-  .parallax .card {
-    position: absolute;
-    background: black;
-    font-size: x-large;
-    padding: 9%;
-    margin-top: 58%;
-    border: solid;
-    border-color: white;
-    border-width: 1vw;
-    height: 38vh;
-    width: 44vw;
-    /* margin: 2%; */
-  }
-  
-  .parallax .card .card_heading{
+  .parallax .card_heading{
+    padding-top: 12vh;
     font-size: 6vw;
-    font-variant: small-caps;
     color: white;
-    line-height: 6vh;
-
+    text-align: center;
   }
-  
-  .parallax .card .card_heading .cardheading_content{
+  .headingbody{
     font-size: 3vw;
-    font-variant: normal;
-    line-height: 3vh;
-    padding-top: 2vh;
-    /* padding: 5%; */
-  }  
+    text-align: center;
+  }
+
+  .arrow{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding-top: 33vh;
+}
+.arrow span{
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-bottom: 5px solid white;
+    border-right: 5px solid white;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate 2s infinite;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.arrow span:nth-child(2){
+    animation-delay: -0.2s;
+}
+.arrow span:nth-child(3){
+    animation-delay: -0.4s;
+}
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px,-20px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(20px,20px);
+    }
+}  
 }
 
 
@@ -260,10 +284,13 @@ a{
   }
   
   .parallax .card_heading{
-    font-size: 6vw;
-    font-variant: small-caps;
+    font-size: 5vw;
     color: white;
-   text-align: center;
+    text-align: center;
+  }
+  .headingbody{
+    font-size: 3vw;
+    text-align: center;
   }
 
   .arrow{
@@ -276,11 +303,17 @@ a{
     display: block;
     width: 30px;
     height: 30px;
-    border-bottom: 5px solid #06A8FF;
-    border-right: 5px solid #06A8FF;
+    border-bottom: 5px solid white;
+    border-right: 5px solid white;
     transform: rotate(45deg);
     margin: -10px;
     animation: animate 2s infinite;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 .arrow span:nth-child(2){
     animation-delay: -0.2s;

@@ -28,6 +28,13 @@ window.addEventListener('DOMContentLoaded', ()=>{
 })
 
 
+$('.arrow').click(function() {      // When arrow is clicked
+  $('body,html').animate({
+      scrollTop : $(".parallax.second").position().top                       // Scroll to top of body
+  }, 700);
+});
+
+
 const toggle = document.querySelector(".toggle");
 const menu = document.querySelector(".menu");
 
